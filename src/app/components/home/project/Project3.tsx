@@ -55,8 +55,8 @@ export function Project03() {
                         <span></span>
                         <span className="fab fa-linkedin">
                           <div
-                            viewBox="0 0 448 512"
-                            height="2em"
+                            // viewBox="0 0 448 512"
+                            // height="2em"
                             style={{ marginLeft: "4px", marginTop: "4px" }}
                           >
                             <FaSquareGithub className="text-[#1da1f2]" />
@@ -84,8 +84,8 @@ export function Project03() {
                         <span></span>
                         <span className="fab fa-linkedin">
                           <div
-                            viewBox="0 0 448 512"
-                            height="2em"
+                            // viewBox="0 0 448 512"
+                            // height="2em"
                             style={{ marginLeft: "4px", marginTop: "4px" }}
                           >
                             <IoServerSharp className="text-[#1da1f2]" />
@@ -110,8 +110,8 @@ export function Project03() {
                         <span></span>
                         <span className="fab fa-linkedin">
                           <div
-                            viewBox="0 0 448 512"
-                            height="2em"
+                            // viewBox="0 0 448 512"
+                            // height="2em"
                             style={{ marginLeft: "4px", marginTop: "4px" }}
                           >
                             <CgMediaLive className="text-[#1da1f2]" />
