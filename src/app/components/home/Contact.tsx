@@ -23,7 +23,7 @@ const Contact = () => {
             }
           />
         </div>
-        <div
+        <form
           style={{ boxShadow: "1px 1px 30px #00ADB5" }}
           className="px-8 py-10 rounded-md"
         >
@@ -62,8 +62,11 @@ const Contact = () => {
                 Your message
               </label>
             </div>
+            <button className="text-[16px] font-medium py-2 rounded-md text-white mt-10 w-full bg-customSion">
+              Submit
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

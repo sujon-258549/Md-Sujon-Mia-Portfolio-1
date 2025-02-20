@@ -90,10 +90,10 @@ const Navbar = () => {
                 ].map(({ id, label }) => (
                   <button
                     key={id}
-                    className={`px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform  lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                    className={`px-3 py-2 text-left mx-3 mt-2 font-semibold  transition-colors duration-300 transform  lg:mt-0  hover:bg-gray-100 dark:hover:bg-gray-700 ${
                       activeSection === id
-                        ? "border-b-[3px] border-customSion"
-                        : ""
+                        ? "border-b-[3px] dark:text-customSion border-customSion"
+                        : "dark:text-gray-200"
                     }`}
                     onClick={(e) => {
                       e.preventDefault();
