@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons from react-icons
 
@@ -7,16 +9,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative bg-white shadow dark:bg-gray-800">
-      <div className="container px-6 py-4 mx-auto">
+    <nav className="bg-white shadow dark:bg-gray-800 sticky top-0 left-0">
+      <div className="max-w-6xl px-6 py-4 mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between">
             <a href="#">
-              <img
-                className="w-auto h-6 sm:h-7"
-                src="https://merakiui.com/images/full-logo.svg"
-                alt="Logo"
-              />
+              <Image height={20} width={150} src="/sujon.png" alt="Logo" />
             </a>
 
             {/* Mobile menu button */}
@@ -45,30 +43,35 @@ const Navbar = () => {
             }`}
           >
             <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-              <a
-                href="#"
-                className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+              <button
+                className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                onClick={() => setIsOpen(!isOpen)}
               >
-                Join Slack
-              </a>
-              <a
-                href="#"
-                className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                {" "}
+                <Link href="">Home</Link>
+              </button>
+
+              <button
+                className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                onClick={() => setIsOpen(!isOpen)}
               >
-                Browse Topics
-              </a>
-              <a
-                href="#"
-                className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                {" "}
+                <Link href="">About</Link>
+              </button>
+              <button
+                className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                onClick={() => setIsOpen(!isOpen)}
               >
-                Random Item
-              </a>
-              <a
-                href="#"
-                className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                {" "}
+                <Link href="">Project</Link>
+              </button>
+              <button
+                className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                onClick={() => setIsOpen(!isOpen)}
               >
-                Experts
-              </a>
+                {" "}
+                <Link href="">Contact</Link>
+              </button>
             </div>
           </div>
         </div>
