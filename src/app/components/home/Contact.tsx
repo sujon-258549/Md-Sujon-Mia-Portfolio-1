@@ -3,8 +3,8 @@ import "./contact.css";
 
 const Contact = () => {
   return (
-    <div className=" md:py-20">
-      <div className="text-center mb-10">
+    <div className=" md:pb-20">
+      <div className="text-center md:mb-20 mb-10">
         <h1
           className="
           text-3xl text-white font-bold -mb-8 md:mb-10  md:text-5xl text-center "

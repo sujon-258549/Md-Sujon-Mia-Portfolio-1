@@ -42,7 +42,7 @@ const skills = [
 const Skills = () => {
   return (
     <div className="  text-white px-5">
-      <div className="text-center mb-8 md:mb-10">
+      <div className="text-center mb-8 md:mb-16">
         <h1
           className="
             text-3xl text-white font-bold  md:text-5xl text-center "
