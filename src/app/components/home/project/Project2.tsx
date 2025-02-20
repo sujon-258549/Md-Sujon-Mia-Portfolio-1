@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
-
+import { PinContainer } from "../../ui/PinContainer";
 import { FaLeftLong, FaRightLong, FaSquareGithub } from "react-icons/fa6";
 import { CgMediaLive } from "react-icons/cg";
 // import Image from "next/image";
 import "./h.css";
 import "./s.css";
 import { IoServerSharp } from "react-icons/io5";
-import { PinContainer } from "../../ui/PinContainer";
-export function Project01() {
+export function Project02() {
   return (
     <div className="">
       <div className="h-[29rem] w-full flex items-center justify-center mb-16">
@@ -18,39 +17,36 @@ export function Project01() {
         >
           <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[28.5rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-              Garments Industry Monitoring Software
+              Alternative Product
             </h3>
             <div className="text-base !m-0 !p-0 font-normal">
               <span className="text-slate-500 ">
-                This project is an inventory and monitoring software for the
-                garments industry...
+                The Alternative Product Project is a full-stack project...
               </span>
             </div>
             <div className="py-5">
               {/* <h2 className="text-center">Image Scroll on Hover</h2> */}
-              <div className="col-md-4 col-md-offset-4 contents2">
-                <div className="screens2">
-                  <img src="/111.png" alt="Scrollable Content" />
+              <div className="col-md-4 col-md-offset-4 contents">
+                <div className="screens">
+                  <img src="/222.png" alt="Scrollable Content" />
                 </div>
               </div>
             </div>
             <div />
 
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex justify-between items-center">
               <FaLeftLong className="text-4xl text-[#1da1f2]" />
               <div className="flex gap-2 justify-center">
                 <div className="tooltip-container">
                   <div className="tooltip">
                     <div className="profile">
-                      <div className="text-white font-mono">
-                        GitHub Clink Site
-                      </div>
+                      <div className="text-white font-mono">GitHub Link</div>
                     </div>
                   </div>
                   <div className="text">
                     <a
                       className="icon"
-                      href="https://github.com/sujon-258549/inventory-management"
+                      href="https://github.com/sujon-258549/Alternative-product-clint-side"
                     >
                       <div className="layer">
                         <span></span>
@@ -79,7 +75,7 @@ export function Project01() {
                   <div className="text">
                     <a
                       className="icon"
-                      href="https://github.com/sujon-258549/inventory-management-service"
+                      href="https://github.com/sujon-258549/altranative-product-servire"
                     >
                       <div className="layer">
                         <span></span>
@@ -108,7 +104,7 @@ export function Project01() {
                   <div className="text">
                     <a
                       className="icon"
-                      href="https://inventory-management-354ce.web.app/"
+                      href="https://alternative-product-11.web.app"
                     >
                       <div className="layer">
                         <span></span>

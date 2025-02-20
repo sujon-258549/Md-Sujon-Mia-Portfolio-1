@@ -1,4 +1,7 @@
-import "./project.css";
+import { Project01 } from "./project/Project1";
+import { Project02 } from "./project/Project2";
+import { Project03 } from "./project/Project3";
+
 const Project = () => {
   return (
     <div className="py-12 text-white">
@@ -10,19 +13,10 @@ const Project = () => {
           Our Project
         </h1>
       </div>
-      <div>
-        <div className="card">
-          <div className="card-image"></div>
-          <p className="card-title">Card title</p>
-          <p className="card-body">
-            Nullam ac tristique nulla, at convallis quam. Integer consectetur mi
-            nec magna tristique, non lobortis.
-          </p>
-          <p className="footer">
-            Written by <span className="by-name">John Doe</span> on{" "}
-            <span className="date">25/05/23</span>
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:gridc">
+        <Project01 />
+        <Project02 />
+        <Project03 />
       </div>
     </div>
   );
