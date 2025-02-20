@@ -51,8 +51,9 @@ const Services = () => {
           className="
             text-3xl text-white font-bold mt-6 lg:mt-0 md:mt-10 md:text-5xl text-center "
         >
-          Our Services
+          Our Services Section
         </h1>
+        <div className=" max-w-[80%] md:max-w-[500px] border-b md:border-b-[2px] border-white mx-auto mt-3 md:mt-5"></div>
       </div>
       <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
     </div>
