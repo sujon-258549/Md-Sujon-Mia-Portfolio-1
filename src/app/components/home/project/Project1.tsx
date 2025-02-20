@@ -8,6 +8,7 @@ import "./h.css";
 import "./s.css";
 import { IoServerSharp } from "react-icons/io5";
 import { PinContainer } from "../../ui/PinContainer";
+import Image from "next/image";
 export function Project01() {
   return (
     <div className="">
@@ -23,14 +24,18 @@ export function Project01() {
             <div className="text-base !m-0 !p-0 font-normal">
               <span className="text-slate-500 ">
                 This project is an inventory and monitoring software for the
-                garments industry...
+                {/* garments industry... */}
               </span>
             </div>
             <div className="py-5">
               {/* <h2 className="text-center">Image Scroll on Hover</h2> */}
               <div className="col-md-4 col-md-offset-4 contents2">
-                <div className="screens2">
-                  <img src="/111.png" alt="Scrollable Content" />
+                <div className="screens2 relative">
+                  <Image
+                    fill
+                    src="https://md-sujon-mia-portfolio.vercel.app/111.png"
+                    alt="Scrollable Content"
+                  />
                 </div>
               </div>
             </div>
@@ -58,11 +63,7 @@ export function Project01() {
                         <span></span>
                         <span></span>
                         <span className="fab fa-linkedin">
-                          <div
-                            viewBox="0 0 448 512"
-                            height="2em"
-                            style={{ marginLeft: "4px", marginTop: "4px" }}
-                          >
+                          <div style={{ marginLeft: "4px", marginTop: "4px" }}>
                             <FaSquareGithub className="text-[#1da1f2]" />
                           </div>
                         </span>
@@ -87,11 +88,7 @@ export function Project01() {
                         <span></span>
                         <span></span>
                         <span className="fab fa-linkedin">
-                          <div
-                            viewBox="0 0 448 512"
-                            height="2em"
-                            style={{ marginLeft: "4px", marginTop: "4px" }}
-                          >
+                          <div style={{ marginLeft: "4px", marginTop: "4px" }}>
                             <IoServerSharp className="text-[#1da1f2]" />
                           </div>
                         </span>
@@ -116,11 +113,7 @@ export function Project01() {
                         <span></span>
                         <span></span>
                         <span className="fab fa-linkedin">
-                          <div
-                            viewBox="0 0 448 512"
-                            height="2em"
-                            style={{ marginLeft: "4px", marginTop: "4px" }}
-                          >
+                          <div style={{ marginLeft: "4px", marginTop: "4px" }}>
                             <CgMediaLive className="text-[#1da1f2]" />
                           </div>
                         </span>

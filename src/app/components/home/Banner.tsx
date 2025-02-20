@@ -15,7 +15,7 @@ const Banner = () => {
 
   return (
     <div>
-      <div className="container px-6 py-16 mx-auto">
+      <div className="px-5 py-8 md:py-16 mx-auto">
         <div className="items-center lg:flex">
           <div className="w-full lg:w-1/2">
             <div className="lg:max-w-lg">
@@ -61,7 +61,7 @@ const Banner = () => {
               </button>
             </div>
           </div>
-          <div className="flex items-center relative justify-center w-full mt-6 lg:mt-0 lg:w-1/2 h-[400px]">
+          <div className="flex items-center  relative justify-center w-full mt-10 md:mt-32 lg:mt-0 lg:w-1/2 h-[400px]">
             <Image
               width={400}
               height={250}

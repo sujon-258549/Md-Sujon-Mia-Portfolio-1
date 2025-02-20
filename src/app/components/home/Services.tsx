@@ -7,7 +7,7 @@ const Services = () => {
         "This is the best service I've ever used. The team is incredibly helpful and professional.",
       name: "Frontend Development",
       designation:
-        "We specialize in creating modern and responsive user interfaces using React, Vue, and Angular.",
+        "We specialize in creating modern and responsive user interfaces using React,",
       src: "https://media.licdn.com/dms/image/v2/D5612AQFfhTEictqBHA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721174916441?e=2147483647&v=beta&t=IqnGNJxS4J-yaL4rgLBlx-cbNAbFwpEMCRvkkLXsR48", // Replace with your image path
     },
     {
@@ -15,7 +15,7 @@ const Services = () => {
         "An amazing experience! The project was completed ahead of schedule and exceeded our expectations.",
       name: "Backend Development",
       designation:
-        "We provide robust backend development using Node.js, Express, and databases like MongoDB and SQL.",
+        "We provide robust backend development using Node.js, Express, and databases like MongoDB.",
       src: "https://cdn.pixabay.com/photo/2023/12/15/11/13/programming-8450423_1280.png", // Replace with your image path
     },
     {
@@ -45,11 +45,11 @@ const Services = () => {
   ];
 
   return (
-    <div className="py-10 md:py-20">
+    <div className="pt-14 pb-0 md:pt-20 md:pb-20">
       <div>
         <h1
           className="
-            text-3xl text-white font-bold  md:text-5xl text-center "
+            text-3xl text-white font-bold mt-6 lg:mt-0 md:mt-10 md:text-5xl text-center "
         >
           Our Services
         </h1>

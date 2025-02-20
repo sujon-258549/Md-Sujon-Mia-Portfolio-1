@@ -41,19 +41,19 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="py-12 text-white">
-      <div className="text-center mb-10">
+    <div className="  text-white px-5">
+      <div className="text-center mb-8 md:mb-10">
         <h1
           className="
             text-3xl text-white font-bold  md:text-5xl text-center "
         >
-          Our Services
+          Our Skills
         </h1>
       </div>
 
       {/* Skill Cards Grid */}
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 md:px-16"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}

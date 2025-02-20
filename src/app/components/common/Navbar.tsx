@@ -1,24 +1,58 @@
+/* eslint-disable prefer-const */
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons from react-icons
 import Banner from "../home/Banner";
 import Services from "../home/Services";
 import Skills from "../home/Skills";
 import Project from "../home/Project";
+import Contact from "../home/Contact";
+import Footer from "../home/Footer";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "services", "skills", "project", "contact"];
+      let currentSection = "home";
+
+      for (let section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            currentSection = section;
+            break;
+          }
+        }
+      }
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <>
       <nav
-        style={{ zIndex: "999" }}
+        id="home"
+        style={{ zIndex: "999", borderBottom: "1px solid white" }}
         className="bg-white shadow dark:bg-customBg sticky top-0 left-0"
       >
-        <div className="max-w-6xl px-6 py-4 mx-auto">
+        <div className="max-w-6xl px-5 py-4 mx-auto">
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="flex items-center justify-between">
               <a href="#">
@@ -33,11 +67,7 @@ const Navbar = () => {
                   className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
                   aria-label="toggle menu"
                 >
-                  {!isOpen ? (
-                    <FaBars size={24} /> // Hamburger icon (open menu)
-                  ) : (
-                    <FaTimes size={24} /> // Close icon (close menu)
-                  )}
+                  {!isOpen ? <FaBars size={24} /> : <FaTimes size={24} />}
                 </button>
               </div>
             </div>
@@ -51,59 +81,54 @@ const Navbar = () => {
               }`}
             >
               <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                <button
-                  className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  {" "}
-                  <Link href="">Home</Link>
-                </button>
-
-                <button
-                  className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  {" "}
-                  <Link href="">About</Link>
-                </button>
-                <button
-                  className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  {" "}
-                  <Link href="">Skills</Link>
-                </button>
-                <button
-                  className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  {" "}
-                  <Link href="">Project</Link>
-                </button>
-                <button
-                  className="px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  {" "}
-                  <Link href="">Contact</Link>
-                </button>
+                {[
+                  { id: "about", label: "About" },
+                  { id: "services", label: "Services" },
+                  { id: "skills", label: "Skills" },
+                  { id: "project", label: "Project" },
+                  { id: "contact", label: "Contact" },
+                ].map(({ id, label }) => (
+                  <button
+                    key={id}
+                    className={`px-3 py-2 text-left mx-3 mt-2 text-gray-700 transition-colors duration-300 transform  lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      activeSection === id
+                        ? "border-b-[3px] border-customSion"
+                        : ""
+                    }`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(id);
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </nav>
+
       <main className="bg-customBg">
-        <section className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto" id="about">
           <Banner />
         </section>
-        <section className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto" id="services">
           <Services />
         </section>
-        <section className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto" id="skills">
           <Skills />
         </section>
-        <section className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto" id="project">
           <Project />
+        </section>
+        <section className="max-w-6xl px-6 mx-auto" id="contact">
+          <Contact />
+        </section>
+        <section style={{ backgroundColor: "#000" }}>
+          <div className="max-w-6xl px-6 mx-auto">
+            <Footer />
+          </div>
         </section>
       </main>
     </>

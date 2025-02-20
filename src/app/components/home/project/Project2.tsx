@@ -7,6 +7,7 @@ import { CgMediaLive } from "react-icons/cg";
 import "./h.css";
 import "./s.css";
 import { IoServerSharp } from "react-icons/io5";
+import Image from "next/image";
 export function Project02() {
   return (
     <div className="">
@@ -17,18 +18,18 @@ export function Project02() {
         >
           <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[28.5rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-              Alternative Product
+              Car Shop
             </h3>
             <div className="text-base !m-0 !p-0 font-normal">
               <span className="text-slate-500 ">
-                The Alternative Product Project is a full-stack project...
+                The Car Shop Project is a full-stack project...
               </span>
             </div>
             <div className="py-5">
               {/* <h2 className="text-center">Image Scroll on Hover</h2> */}
               <div className="col-md-4 col-md-offset-4 contents">
-                <div className="screens">
-                  <img src="/222.png" alt="Scrollable Content" />
+                <div className="screens relative">
+                  <Image fill src="/carshop.png" alt="Scrollable Content" />
                 </div>
               </div>
             </div>
@@ -46,7 +47,7 @@ export function Project02() {
                   <div className="text">
                     <a
                       className="icon"
-                      href="https://github.com/sujon-258549/Alternative-product-clint-side"
+                      href="https://github.com/sujon-258549/assungment-4-car-frontend"
                     >
                       <div className="layer">
                         <span></span>
@@ -54,11 +55,7 @@ export function Project02() {
                         <span></span>
                         <span></span>
                         <span className="fab fa-linkedin">
-                          <div
-                            viewBox="0 0 448 512"
-                            height="2em"
-                            style={{ marginLeft: "4px", marginTop: "4px" }}
-                          >
+                          <div style={{ marginLeft: "4px", marginTop: "4px" }}>
                             <FaSquareGithub className="text-[#1da1f2]" />
                           </div>
                         </span>
@@ -75,7 +72,7 @@ export function Project02() {
                   <div className="text">
                     <a
                       className="icon"
-                      href="https://github.com/sujon-258549/altranative-product-servire"
+                      href="https://github.com/sujon-258549/level-2-assignment-2"
                     >
                       <div className="layer">
                         <span></span>
@@ -83,11 +80,7 @@ export function Project02() {
                         <span></span>
                         <span></span>
                         <span className="fab fa-linkedin">
-                          <div
-                            viewBox="0 0 448 512"
-                            height="2em"
-                            style={{ marginLeft: "4px", marginTop: "4px" }}
-                          >
+                          <div style={{ marginLeft: "4px", marginTop: "4px" }}>
                             <IoServerSharp className="text-[#1da1f2]" />
                           </div>
                         </span>
@@ -104,7 +97,7 @@ export function Project02() {
                   <div className="text">
                     <a
                       className="icon"
-                      href="https://alternative-product-11.web.app"
+                      href="https://car-shop-one-indol.vercel.app"
                     >
                       <div className="layer">
                         <span></span>
@@ -112,11 +105,7 @@ export function Project02() {
                         <span></span>
                         <span></span>
                         <span className="fab fa-linkedin">
-                          <div
-                            viewBox="0 0 448 512"
-                            height="2em"
-                            style={{ marginLeft: "4px", marginTop: "4px" }}
-                          >
+                          <div style={{ marginLeft: "4px", marginTop: "4px" }}>
                             <CgMediaLive className="text-[#1da1f2]" />
                           </div>
                         </span>
