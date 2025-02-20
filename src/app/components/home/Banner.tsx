@@ -7,7 +7,8 @@ const Banner = () => {
     const cvUrl = "/cv/sujon-cv.pdf"; // Replace with the actual path to your CV file
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "Sujon_Mia_CV.pdf"; // Rename file when downloading
+    link.download =
+      "https://drive.google.com/file/d/127Wkem3CgpQG2eb7PhJqMrSSF7lryNbG/view?usp=sharing"; // Rename file when downloading
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
