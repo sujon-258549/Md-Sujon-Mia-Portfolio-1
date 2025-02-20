@@ -47,8 +47,9 @@ const Skills = () => {
           className="
             text-3xl text-white font-bold  md:text-5xl text-center "
         >
-          Our Skills
+          Our Skills Section
         </h1>
+        <div className=" max-w-[80%] md:max-w-[500px] border-b md:border-b-[2px] border-white mx-auto mt-3 md:mt-5"></div>
       </div>
 
       {/* Skill Cards Grid */}

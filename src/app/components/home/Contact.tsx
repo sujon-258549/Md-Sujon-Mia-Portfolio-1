@@ -11,6 +11,7 @@ const Contact = () => {
         >
           Contact Us
         </h1>
+        <div className=" max-w-[80%] md:max-w-[500px] border-b md:border-b-[2px] border-white mx-auto mt-3 md:mt-5"></div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 ">
         <div className="relative">
