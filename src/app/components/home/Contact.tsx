@@ -9,7 +9,7 @@ const Contact = () => {
           className="
           text-3xl text-white font-bold -mb-8 md:mb-10  md:text-5xl text-center "
         >
-          Contact Us
+          Contact Us Section
         </h1>
         <div className=" max-w-[80%] md:max-w-[500px] border-b md:border-b-[2px] border-white mx-auto mt-3 md:mt-5"></div>
       </div>
