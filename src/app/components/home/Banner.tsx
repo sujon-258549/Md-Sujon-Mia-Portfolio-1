@@ -1,79 +1,98 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import Loading from "../loading/Loading";
 
 const Banner = () => {
-  // Function to handle CV download
   const handleDownload = () => {
-    const cvUrl = "/cv/sujon-cv.pdf"; // Replace with the actual path to your CV file
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download =
-      "https://drive.google.com/file/d/127Wkem3CgpQG2eb7PhJqMrSSF7lryNbG/view?usp=sharing"; // Rename file when downloading
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = '/path-to-your-cv.pdf'; // Replace with your actual CV path
+    link.download = 'Sujon_CV.pdf'; // Customize the downloaded filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <div>
-      <div className="px-5 py-8 md:py-16 mx-auto">
-        <div className="items-center lg:flex">
-          <div className="w-full lg:w-1/2">
-            <div className="lg:max-w-lg">
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white lg:text-5xl">
-                Hi, I,m <span className="uppercase text-customSion">sujon</span>
-              </h1>
-              <h1 className="text-2xl font-semibold text-customSion pt-5 lg:text-3xl">
-                <Typewriter
-                  words={[
-                    "Frontend Developer",
-                    "Backend Developer",
-                    "MERN Stack Developer",
-                    "Web Developer",
-                  ]}
-                  loop={true}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={50}
-                  deleteSpeed={40}
-                  delaySpeed={1000}
-                />
-              </h1>
-
-              <p className="mt-3 text-gray-600 dark:text-gray-400">
-                I am a passionate and dedicated MERN Stack Developer with a
-                strong foundation in both frontend and backend development. I
-                specialize in building scalable, efficient, and user-friendly
-                web applications using modern technologies like React.js,
-                Next.js, TypeScript, Redux, Node.js, Express.js, MongoDB, and
-                Mongoose. With expertise in state management and database
-                modeling, I ensure that applications are not only interactive
-                and responsive but also well-structured and optimized for
-                performance. My goal is to craft seamless digital experiences
-                with clean, maintainable, and performance-optimized code.
-              </p>
-
-              {/* Download CV Button with onClick */}
-              <button
-                onClick={handleDownload}
-                className="w-full px-5 py-2.5 mt-6 tracking-wider text-[16px] font-medium bg-customSion text-white uppercase transition-colors duration-300 transform rounded-lg lg:w-auto focus:outline-none hover:bg-transparent border border-customSion"
-              >
-                Download CV
-              </button>
+    <section className="py-16 relative overflow-hidden text-white">
+      <div className="container mx-auto px-6 lg:px-16">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+          {/* Left Content - All text information */}
+          <div className="w-full lg:w-1/2 space-y-6">
+            {/* Designation */}
+            <div className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-full inline-block shadow-lg">
+              <span className="font-medium tracking-wide">Web Stack Developer</span>
             </div>
+
+            {/* Name and Introduction */}
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+              Hi, I'm <span className="text-[#10B981] uppercase">Sujon</span>
+            </h1>
+
+            {/* Dynamic Roles */}
+            <h2 className="text-xl md:text-2xl font-semibold text-yellow-300 min-h-[32px]">
+              <Typewriter
+                words={[
+                  "Frontend Specialist",
+                  "Backend Engineer",
+                  "Full Stack Developer",
+                  "Web Solutions Architect",
+                ]}
+                loop
+                cursor
+                cursorStyle="|"
+                typeSpeed={50}
+                deleteSpeed={40}
+                delaySpeed={1000}
+              />
+            </h2>
+
+            {/* About Me */}
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 shadow-lg">
+              <h3 className="text-lg font-bold text-emerald-400 mb-2">About Me</h3>
+              <p className="text-gray-200 leading-relaxed">
+                I'm a passionate full-stack developer specializing in modern web technologies.
+                With expertise in React.js, Node.js, Express, and MongoDB, I build clean,
+                responsive, and high-performance applications. My focus is on creating
+                maintainable code and exceptional user experiences.
+              </p>
+            </div>
+
+            {/* Download CV Button with working functionality */}
+            <Button
+              onClick={handleDownload}
+              className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold px-8 py-4 rounded-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-emerald-500/30"
+            >
+              <FaDownload className="text-lg" />
+              <span>Download CV</span>
+            </Button>
           </div>
-          <div className="flex items-center  relative justify-center w-full mt-10 md:mt-32 lg:mt-0 lg:w-1/2 h-[400px]">
-            <Image
-              width={400}
-              height={250}
-              src="/sujon-banner.png"
-              alt="Catalogue-pana.svg"
-              className="object-cover"
-            />
+
+          {/* Right Image with decorative elements */}
+          <div className="w-full lg:w-1/2 flex justify-center relative">
+            <div className="relative z-10 group">
+              <div className="absolute -inset-3 bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-xl blur opacity-20 group-hover:opacity-30 transition-all duration-500 -z-10"></div>
+              <Image
+                width={400}
+                height={400}
+                src="/sujon-banner.png"
+                alt="Sujon - Professional Web Developer"
+                className="relative rounded-xl shadow-2xl border-4 border-emerald-400/100 group-hover:border-emerald-400/150 transition-all duration-500 transform group-hover:scale-105"
+                priority
+              />
+              {/* Floating tech badges */}
+
+            </div>
+
+            {/* Animated background elements */}
+            <div className="absolute w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse -z-10 top-0 right-0"></div>
+            <div className="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse -z-10 bottom-0 left-0"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ const Services = () => {
       name: "Frontend Development",
       designation:
         "We specialize in creating modern and responsive user interfaces using React,",
-      src: "https://media.licdn.com/dms/image/v2/D5612AQFfhTEictqBHA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721174916441?e=2147483647&v=beta&t=IqnGNJxS4J-yaL4rgLBlx-cbNAbFwpEMCRvkkLXsR48", // Replace with your image path
+      src: "https://img.freepik.com/premium-vector/vector-colorful-illustration-programmer-working_1045608-6.jpg?ga=GA1.1.547461502.1745654198&semt=ais_hybrid&w=740", // Replace with your image path
     },
     {
       quote:
@@ -51,11 +51,13 @@ const Services = () => {
           className="
             text-3xl text-white font-bold mt-6 lg:mt-0 md:mt-10 md:text-5xl text-center "
         >
-          Our Services Section
+          Services Section
         </h1>
         <div className=" max-w-[80%] md:max-w-[500px] border-b md:border-b-[2px] border-white mx-auto mt-3 md:mt-5"></div>
       </div>
-      <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+      <div className="text-white">
+        <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+      </div>
     </div>
   );
 };

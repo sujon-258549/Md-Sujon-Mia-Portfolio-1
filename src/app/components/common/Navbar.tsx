@@ -6,10 +6,11 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons from react-icons
 import Banner from "../home/Banner";
 import Services from "../home/Services";
-import Skills from "../home/Skills";
 import Project from "../home/Project";
 import Contact from "../home/Contact";
 import Footer from "../home/Footer";
+import Education from "../home/Education";
+import SkillsTab from "../home/Skills/SkillsTab";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,8 +50,8 @@ const Navbar = () => {
     <>
       <nav
         id="home"
-        style={{ zIndex: "999", borderBottom: "1px solid white" }}
-        className="bg-white shadow dark:bg-customBg sticky top-0 left-0"
+        style={{ zIndex: "999", borderBottom: "1px solid white", backgroundColor: '#424242' }}
+        className="shadow dark:bg-customBg sticky top-0 left-0"
       >
         <div className="max-w-6xl px-5 py-4 mx-auto">
           <div className="lg:flex lg:items-center lg:justify-between">
@@ -74,11 +75,10 @@ const Navbar = () => {
 
             {/* Mobile Menu open: "block", Menu closed: "hidden" */}
             <div
-              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-[#1D1C21] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${
-                isOpen
-                  ? "translate-x-0 opacity-100"
-                  : "opacity-0 -translate-x-full"
-              }`}
+              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-[#1D1C21] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${isOpen
+                ? "translate-x-0 opacity-100"
+                : "opacity-0 -translate-x-full"
+                }`}
             >
               <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
                 {[
@@ -90,11 +90,10 @@ const Navbar = () => {
                 ].map(({ id, label }) => (
                   <button
                     key={id}
-                    className={`px-3 py-2 text-left mx-3 mt-2 font-semibold  transition-colors duration-300 transform  lg:mt-0  hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      activeSection === id
-                        ? "border-b-[3px] dark:text-customSion border-customSion"
-                        : "dark:text-gray-200"
-                    }`}
+                    className={`px-3 py-2 text-left mx-3 mt-2 text-white hover:text-black font-semibold  transition-colors duration-300 transform  lg:mt-0  hover:bg-gray-100 dark:hover:bg-gray-700 ${activeSection === id
+                      ? "border-b-[3px] dark:text-customSion border-customSion"
+                      : "dark:text-gray-200"
+                      }`}
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(id);
@@ -109,15 +108,16 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <main className="bg-customBg">
+      <main className="bg-[#424242]">
         <section className="max-w-6xl mx-auto" id="about">
           <Banner />
+          <Education />
         </section>
         <section className="max-w-6xl mx-auto" id="services">
           <Services />
         </section>
         <section className="max-w-6xl mx-auto" id="skills">
-          <Skills />
+          <SkillsTab />
         </section>
         <section className="max-w-6xl mx-auto" id="project">
           <Project />
@@ -125,7 +125,7 @@ const Navbar = () => {
         <section className="max-w-6xl px-6 mx-auto" id="contact">
           <Contact />
         </section>
-        <section style={{ backgroundColor: "#000" }}>
+        <section style={{ backgroundColor: "#424242" }}>
           <div className="max-w-6xl px-6 mx-auto">
             <Footer />
           </div>
