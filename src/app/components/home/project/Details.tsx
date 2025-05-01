@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/dialog"
 import { Github, ExternalLink, Database, Target } from "lucide-react"
 import { Project } from "./Project"
-import Image from "next/image"
 
 interface DetailsProps {
     project: Project

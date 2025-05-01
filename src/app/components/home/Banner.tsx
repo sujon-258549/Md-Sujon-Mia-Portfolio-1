@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-import Loading from "../loading/Loading";
 
 const Banner = () => {
   const handleDownload = () => {
@@ -28,7 +27,7 @@ const Banner = () => {
 
             {/* Name and Introduction */}
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Hi, I'm <span className="text-[#10B981] uppercase">Sujon</span>
+              Hi, I,m <span className="text-[#10B981] uppercase">Sujon</span>
             </h1>
 
             {/* Dynamic Roles */}
@@ -53,7 +52,7 @@ const Banner = () => {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 shadow-lg">
               <h3 className="text-lg font-bold text-emerald-400 mb-2">About Me</h3>
               <p className="text-gray-200 leading-relaxed">
-                I'm a passionate full-stack developer specializing in modern web technologies.
+                I,m a passionate full-stack developer specializing in modern web technologies.
                 With expertise in React.js, Node.js, Express, and MongoDB, I build clean,
                 responsive, and high-performance applications. My focus is on creating
                 maintainable code and exceptional user experiences.

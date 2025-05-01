@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaGithub, FaSquareGithub, FaLeftLong, FaRightLong } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import { IoServerSharp } from "react-icons/io5";
 import './h.css'
@@ -21,7 +21,6 @@ export interface Project {
   keyFeatures: string[];
   techStack: string[];
 }
-import { Card, CardContent } from "@/components/ui/card";
 import { Database, Github, Target } from "lucide-react";
 import { Details } from "./Details";
 const projects: Project[] = [

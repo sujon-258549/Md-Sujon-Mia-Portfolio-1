@@ -2,13 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaFacebookF,
-  FaGithub,
-  FaLinkedinIn,
-  FaPhoneSquare,
   FaWhatsapp,
 } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import { Facebook, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {

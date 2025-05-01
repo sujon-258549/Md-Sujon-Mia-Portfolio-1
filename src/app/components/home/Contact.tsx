@@ -1,7 +1,6 @@
-import Image from "next/image";
 import "./contact.css";
 import { motion } from "framer-motion";
-import { GitFork, Mail, MapPin, Phone, Send, Github, Linkedin, OrbitIcon, Facebook } from "lucide-react";
+import { GitFork, Mail, MapPin, Phone, Send, Github, Linkedin, Facebook } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   return (
@@ -50,7 +49,7 @@ const Contact = () => {
               <div className="">
                 {/* Creative Contact Cards */}
                 <h2 className="text-3xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                  Let's Connect
+                  Let,s Connect
                 </h2>
                 <div className="max-w-md h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto" />
                 <p className="my-4 text-gray-300 max-w-2xl mx-auto text-lg">
