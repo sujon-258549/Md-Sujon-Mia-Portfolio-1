@@ -24,7 +24,7 @@ export const Details = ({ project }: DetailsProps) => {
                     </span>
                 </DialogTrigger>
 
-                <DialogContent style={{zIndex:'999', margin:'75px 0'}} className="max-w-4xl  rounded-lg bg-[#424242] border border-gray-700 overflow-hidden">
+                <DialogContent style={{ zIndex: '999', margin: '75px 0' }} className="max-w-4xl  rounded-lg bg-[#424242] border border-gray-700 overflow-hidden">
                     <div className="max-h-[90vh] overflow-y-auto">
                         {/* Project Header */}
                         <DialogHeader className="px-6 pt-6">
@@ -32,11 +32,8 @@ export const Details = ({ project }: DetailsProps) => {
 
                                 <div>
                                     <DialogTitle className="text-2xl pb-5 font-bold text-white">
-                                       Project Name :- {project.title}
+                                        Project Name :- {project.title}
                                     </DialogTitle>
-                                    <DialogDescription className="text-cyan-300 font-mono text-sm">
-                                        {project.description || "PROJECT DETAILS"}
-                                    </DialogDescription>
                                 </div>
                             </div>
                         </DialogHeader>
@@ -122,7 +119,7 @@ export const Details = ({ project }: DetailsProps) => {
                                                     className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                                                 >
                                                     <Target className="w-4 h-4" />
-                                                    <span>Live Demo</span>
+                                                    <span>Live Project</span>
                                                     <ExternalLink className="w-3 h-3 ml-1" />
                                                 </a>
                                             )}
@@ -134,7 +131,8 @@ export const Details = ({ project }: DetailsProps) => {
                                                     className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                                                 >
                                                     <Database className="w-4 h-4" />
-                                                    <span>Documentation</span>
+
+                                                    <span>GitHub Server side</span>
                                                     <ExternalLink className="w-3 h-3 ml-1" />
                                                 </a>
                                             )}

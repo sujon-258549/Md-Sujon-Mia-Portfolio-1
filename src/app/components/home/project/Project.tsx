@@ -51,7 +51,7 @@ const projects: Project[] = [
       {
         label: "Server",
         icon: <IoServerSharp />,
-        url: "https://meal-box-server-production-79f1.up.railway.app",
+        url: "https://github.com/kmdripon1991/meal-box-server",
       },
       {
         label: "Live",
@@ -207,13 +207,13 @@ export function Project() {
                 {/* Action buttons with gradient hover */}
                 <div className="flex justify-between items-center mt-auto">
                   <div className="flex gap-4">
-                    <a href="#" className="hover:text-gray-400 border text-cyan-300 transition-colors duration-300 p-2 rounded-full hover:bg-gray-700/50">
+                    <a href={project.links[0].url} className="hover:text-gray-400 border text-cyan-300 transition-colors duration-300 p-2 rounded-full hover:bg-gray-700/50">
                       <Github className="w-5 h-5" />
                     </a>
-                    <a href="#" className="hover:text-gray-400 border text-blue-300 transition-colors duration-300 p-2 rounded-full hover:bg-gray-700/50">
+                    <a href={project.links[1].url} className="hover:text-gray-400 border text-blue-300 transition-colors duration-300 p-2 rounded-full hover:bg-gray-700/50">
                       <Database className="w-5 h-5" />
                     </a>
-                    <a href="#" className="hover:text-gray-400 border text-green-300 transition-colors duration-300 p-2 rounded-full hover:bg-gray-700/50">
+                    <a href={project.links[2].url} className="hover:text-gray-400 border text-green-300 transition-colors duration-300 p-2 rounded-full hover:bg-gray-700/50">
                       <Target className="w-5 h-5" />
                     </a>
                   </div>
