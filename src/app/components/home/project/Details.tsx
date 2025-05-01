@@ -17,10 +17,10 @@ export const Details = ({ project }: DetailsProps) => {
         <div className="">
             <Dialog>
                 <DialogTrigger asChild>
-                    <span className="relative overflow-hidden px-4 py-2 text-sm font-medium text-white bg-gray-700/50 rounded-lg border border-gray-600 hover:border-cyan-400/30 transition-all group">
+                    <div className="relative overflow-hidden px-4 rounded-md py-2 text-sm font-medium text-white bg-gray-700/50 border border-gray-600 hover:border-cyan-400/30 transition-all group">
                         <span className="relative z-10">View Project</span>
                         <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-blue-600/30 group-hover:opacity-0 opacity-100 transition-opacity duration-300" />
-                    </span>
+                    </div>
                 </DialogTrigger>
 
                 <DialogContent style={{ zIndex: '999', margin: '75px 0' }} className="max-w-4xl  rounded-lg bg-[#424242] border border-gray-700 overflow-hidden">
