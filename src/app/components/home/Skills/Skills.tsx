@@ -41,7 +41,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="py-16  px-5">
+    <section className=" py-12  px-5">
       <div className="mx-auto">
         {/* Section Header */}
 

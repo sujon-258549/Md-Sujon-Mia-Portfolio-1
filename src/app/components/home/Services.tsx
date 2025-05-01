@@ -45,15 +45,16 @@ const Services = () => {
   ];
 
   return (
-    <div className="pt-14 pb-0 md:pt-20 md:pb-20">
+    <div className=" md:pt-8 pb-0 lg:pt-20 md:pb-20">
       <div>
-        <h1
-          className="
-            text-3xl text-white font-bold mt-6 lg:mt-0 md:mt-10 md:text-5xl text-center "
-        >
-          Services Section
-        </h1>
-        <div className=" max-w-[80%] md:max-w-[500px] border-b md:border-b-[2px] border-white mx-auto mt-3 md:mt-5"></div>
+        <div className="text-center  lg:mb-12">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+            <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+              My Services
+            </span>
+          </h2>
+          <div className="max-w-[80%] md:max-w-[500px] h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/70 to-emerald-400/0 mx-auto"></div>
+        </div>
       </div>
       <div className="text-white">
         <AnimatedTestimonials testimonials={testimonials} autoplay={true} />

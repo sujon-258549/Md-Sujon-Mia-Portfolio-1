@@ -17,7 +17,7 @@ const Education = () => {
         <section id="education" className="py-16 text-white transition-all">
             <div className="container mx-auto px-4">
                 {/* Section Header with Gradient Text */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-6 md:mb-12">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
                         <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                             My Education
@@ -26,7 +26,7 @@ const Education = () => {
                     <div className="max-w-[80%] md:max-w-[500px] h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/70 to-emerald-400/0 mx-auto"></div>
                 </div>
 
-                <div className="grid grid-cols-1 pt-10 md:pt-14 md:grid-cols-2 gap-10 items-center">
+                <div className="grid grid-cols-1 pt-5 md:pt-8 lg:pt-14 md:grid-cols-2 gap-10 items-center">
                     {/* Illustration */}
                     <div className="flex justify-center relative group">
                         <div className="absolute -inset-3 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-all -z-10"></div>

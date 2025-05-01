@@ -6,11 +6,11 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons from react-icons
 import Banner from "../home/Banner";
 import Services from "../home/Services";
-import Project from "../home/Project";
 import Contact from "../home/Contact";
 import Footer from "../home/Footer";
 import Education from "../home/Education";
 import SkillsTab from "../home/Skills/SkillsTab";
+import { Project } from "../home/project/Project";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "services", "skills", "project", "contact"];
+      const sections = ["about", "skills", "project", "education", "services","contact"];
       let currentSection = "home";
 
       for (let section of sections) {
@@ -83,9 +83,10 @@ const Navbar = () => {
               <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
                 {[
                   { id: "about", label: "About" },
-                  { id: "services", label: "Services" },
-                  { id: "skills", label: "Skills" },
+                  { id: "skills", label: "skills" },
                   { id: "project", label: "Project" },
+                  { id: "education", label: "Education" },
+                  { id: "services", label: "Services" },
                   { id: "contact", label: "Contact" },
                 ].map(({ id, label }) => (
                   <button
@@ -111,22 +112,25 @@ const Navbar = () => {
       <main className="bg-[#424242]">
         <section className="max-w-6xl mx-auto" id="about">
           <Banner />
-          <Education />
         </section>
-        <section className="max-w-6xl mx-auto" id="services">
-          <Services />
-        </section>
+
         <section className="max-w-6xl mx-auto" id="skills">
           <SkillsTab />
         </section>
         <section className="max-w-6xl mx-auto" id="project">
           <Project />
         </section>
+        <section className="" id="education">
+          <Education />
+        </section>
+        <section className="max-w-6xl mx-auto" id="services">
+          <Services />
+        </section>
         <section className="max-w-6xl px-6 mx-auto" id="contact">
           <Contact />
         </section>
-        <section style={{ backgroundColor: "#424242" }}>
-          <div className="max-w-6xl px-6 mx-auto">
+        <section style={{ backgroundColor: "#424242", boxShadow: '1px 1px 10px' }}>
+          <div className="max-w-6xl px-6 lg:px-0 mx-auto">
             <Footer />
           </div>
         </section>

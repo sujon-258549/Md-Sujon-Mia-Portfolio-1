@@ -16,9 +16,9 @@ const Banner = () => {
   };
 
   return (
-    <section className="py-16 relative overflow-hidden text-white">
-      <div className="container mx-auto px-6 lg:px-16">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+    <section className=" py-10 md:py-16 relative overflow-hidden text-white">
+      <div className=" px-6 lg:px-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content - All text information */}
           <div className="w-full lg:w-1/2 space-y-6">
             {/* Designation */}

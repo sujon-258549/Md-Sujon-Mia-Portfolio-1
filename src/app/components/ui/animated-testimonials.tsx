@@ -56,53 +56,61 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-10 md:py-20">
+    <div className="px-6 md:max-w-4xl mx-auto antialiased font-sans  md:px-8 lg:px-12 py-10 md:py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
-          <div className="relative h-80 w-full">
-            <AnimatePresence>
-              {testimonials?.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.src}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: -100,
-                    rotate: rotation[index] ?? 0,
-                  }}
-                  animate={{
-                    opacity: isActive(index) ? 1 : 0.7,
-                    scale: isActive(index) ? 1 : 0.95,
-                    z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : rotation[index] ?? 0,
-                    zIndex: isActive(index)
-                      ? 99
-                      : testimonials.length + 2 - index,
-                    y: isActive(index) ? [0, -80, 0] : 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: 100,
-                    rotate: rotation[index] ?? 0,
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute inset-0 origin-bottom"
-                >
-                  <Image
-                    src={testimonial.src}
-                    alt={testimonial.name}
-                    width={300}
-                    height={300}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
-                  />
-                </motion.div>
-              ))}
-            </AnimatePresence>
+          <div className="">
+
+
+            <div className="relative h-40 md:h-60 lg:h-80 w-full">
+              <AnimatePresence>
+                {testimonials?.map((testimonial, index) => (
+                  <motion.div
+                    key={testimonial.src}
+                    initial={{
+                      opacity: 0,
+                      scale: 0.9,
+                      z: -100,
+                      rotate: rotation[index] ?? 0,
+                    }}
+                    animate={{
+                      opacity: isActive(index) ? 1 : 0.7,
+                      scale: isActive(index) ? 1 : 0.95,
+                      z: isActive(index) ? 0 : -100,
+                      rotate: isActive(index) ? 0 : rotation[index] ?? 0,
+                      zIndex: isActive(index)
+                        ? 99
+                        : testimonials.length + 2 - index,
+                      y: isActive(index) ? [0, -80, 0] : 0,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      scale: 0.9,
+                      z: 100,
+                      rotate: rotation[index] ?? 0,
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute inset-0 origin-bottom"
+                  >
+                    <div className="relative aspect-square w-full max-w-[200px] lg:max-w-[300px] mx-auto md:max-w-none md:mx-0">
+                      <Image
+                        src={testimonial.src}
+                        alt={testimonial.name}
+                        fill // This makes the image fill the container
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 20vw, 10vw" // Responsive sizing
+                        draggable={false}
+                        className="rounded-3xl object-cover object-center"
+                        quality={85} // Optimized quality
+                        priority={false} // Lazy load by default
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
         <div className="flex justify-between flex-col py-4">

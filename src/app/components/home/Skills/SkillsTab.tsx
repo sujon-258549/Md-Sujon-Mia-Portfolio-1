@@ -5,9 +5,9 @@ import SoftSkills from "./SoftSkills";
 
 const SkillsTab = () => {
     return (
-        <div>
+        <div className=" mt-5 md:mt-10 lg:mt-20">
             <motion.div
-                className="text-center mb-12"
+                className="text-center mb-6 md:mb-12"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
