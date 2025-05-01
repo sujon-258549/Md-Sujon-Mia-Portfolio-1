@@ -56,7 +56,7 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   return (
-    <div className="px-6 md:max-w-4xl mx-auto antialiased font-sans  md:px-8 lg:px-12 py-10 md:py-20">
+    <div className="px-6 md:max-w-4xl mx-auto antialiased font-sans  md:px-8 lg:px-12 pt-4 md:pt-10  pb-10 md:pb-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
           <div className="">

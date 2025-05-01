@@ -141,9 +141,9 @@ const projects: Project[] = [
 
 export function Project() {
   return (
-    <section id="projects" className="py-6 md:py-12 lg:py-20 px-4 mx-auto max-w-7xl">
+    <section id="projects" className="py-6 md:py-12 lg:pb-20 lg:pt-[105px] px-4 mx-auto max-w-7xl">
       <div className="w-full">
-        <div className="text-center mb-12">
+        <div className="text-center pb-7 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
               My Project

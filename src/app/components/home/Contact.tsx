@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className=" md:pb-20">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 md:mt-7 md:mb-20">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
           <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
             My Contact
@@ -13,7 +13,7 @@ const Contact = () => {
         </h2>
         <div className="max-w-[80%] md:max-w-[500px] h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/70 to-emerald-400/0 mx-auto"></div>
       </div>
-      <div className="grid grid-cols-1 md:gap-5 gap-10 lg:gap-10 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:gap-5  gap-10 lg:gap-10 md:grid-cols-2">
         <div className="gap-5 md:gap-10 ">
           <div className="">
             {/* Animated background elements */}

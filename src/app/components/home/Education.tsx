@@ -26,7 +26,7 @@ const Education = () => {
                     <div className="max-w-[80%] md:max-w-[500px] h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/70 to-emerald-400/0 mx-auto"></div>
                 </div>
 
-                <div className="grid grid-cols-1 pt-5 md:pt-8 lg:pt-14 md:grid-cols-2 gap-10 items-center">
+                <div className="grid grid-cols-1 pt-5 md:pt-3 lg:pt-8 md:grid-cols-2 gap-10 items-center">
                     {/* Illustration */}
                     <div className="flex justify-center relative group">
                         <div className="absolute -inset-3 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-all -z-10"></div>

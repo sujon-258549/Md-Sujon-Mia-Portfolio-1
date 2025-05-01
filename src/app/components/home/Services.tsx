@@ -45,7 +45,7 @@ const Services = () => {
   ];
 
   return (
-    <div className=" md:pt-8 pb-0 lg:pt-20 md:pb-20">
+    <div className=" md:pt-8 pb-0  lg:pt-20 md:pb-5">
       <div>
         <div className="text-center  lg:mb-12">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
