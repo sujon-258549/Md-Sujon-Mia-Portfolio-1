@@ -102,7 +102,7 @@ const projects: Project[] = [
     title: "AltSuggest - Alternative Product Suggestion Platform",
     description:
       "AltSuggest is an intelligent platform designed to help users discover alternative or similar products when a desired item is out of stock or too expensive. Built with React.js, Node.js, Express, and MongoDB, it leverages product metadata and recommendation algorithms to enhance the shopping experience. Users can input a product or browse categories, and the system will suggest viable alternatives based on price, features, brand affinity, and user ratings. The platform supports e-commerce integration, making it easy for online retailers to plug it into their stores. It also features a clean, responsive UI, fast search functionality, and detailed product comparison tools. With real-time updates and machine learning readiness, AltSuggest improves user retention and drives conversions by keeping users engaged even when their initial choices are unavailable.",
-    image: "https://i.ibb.co.com/Vpx2Z0RZ/screencapture-meal-box-team-client-vercel-app-dashboard-2025-05-01-14-52-41.png",
+    image: "https://i.ibb.co.com/vvsNnwBh/screencapture-alternative-product-11-web-app-2025-05-01-22-17-30.png",
     keyFeatures: [
       "AI-powered alternative product suggestions",
       "Product comparison based on features, price, and ratings",
@@ -180,7 +180,7 @@ export function Project() {
                     </span>
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white">{project?.title}</h2>
+                    <h2 className="text-2xl font-bold text-white">{project?.title.slice(0, 20)}</h2>
 
                   </div>
                 </div>
