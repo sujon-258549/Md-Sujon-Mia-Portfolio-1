@@ -99,17 +99,18 @@ const projects: Project[] = [
   },
   {
     id: '03',
-    title: "Meal Box",
-    description: "Meal Box is a convenient meal subscription platform designed to deliver fresh, chef-prepared meals directly to customers' doorsteps. Built with React, Node.js, and MongoDB, this full-stack application offers a seamless user experience with features like customizable meal plans, secure payments, and real-time order tracking",
+    title: "AltSuggest - Alternative Product Suggestion Platform",
+    description:
+      "AltSuggest is an intelligent platform designed to help users discover alternative or similar products when a desired item is out of stock or too expensive. Built with React.js, Node.js, Express, and MongoDB, it leverages product metadata and recommendation algorithms to enhance the shopping experience. Users can input a product or browse categories, and the system will suggest viable alternatives based on price, features, brand affinity, and user ratings. The platform supports e-commerce integration, making it easy for online retailers to plug it into their stores. It also features a clean, responsive UI, fast search functionality, and detailed product comparison tools. With real-time updates and machine learning readiness, AltSuggest improves user retention and drives conversions by keeping users engaged even when their initial choices are unavailable.",
     image: "https://i.ibb.co.com/Vpx2Z0RZ/screencapture-meal-box-team-client-vercel-app-dashboard-2025-05-01-14-52-41.png",
     keyFeatures: [
-      "User-friendly dashboard for meal selection",
-      "Secure checkout with Stripe integration",
-      "Admin panel for restaurant partners",
-      "Responsive design for all devices"
+      "AI-powered alternative product suggestions",
+      "Product comparison based on features, price, and ratings",
+      "Real-time inventory-based recommendations",
+      "Responsive UI and fast search filtering"
     ],
     techStack: [
-      "React.js, Next.js, Tailwind CSS",
+      "React.js, Tailwind CSS",
       "Node.js, Express.js",
       "MongoDB",
       "Firebase & JWT",
@@ -119,17 +120,17 @@ const projects: Project[] = [
       {
         label: "GitHub",
         icon: <FaGithub />,
-        url: "https://github.com/your-repo",
+        url: "https://github.com/Porgramming-Hero-web-course/b9a11-client-side-sujob258549",
       },
       {
         label: "Server",
         icon: <IoServerSharp />,
-        url: "https://github.com/your-server-repo",
+        url: "https://github.com/Porgramming-Hero-web-course/b9a11-server-side-sujob258549",
       },
       {
         label: "Live",
         icon: <FiExternalLink />,
-        url: "https://your-live-site.com",
+        url: "https://alternative-product-11.web.app/",
       },
     ],
   },
