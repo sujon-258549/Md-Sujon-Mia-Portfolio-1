@@ -36,68 +36,69 @@ const projects: Project[] = [
       "Responsive design for all devices"
     ],
     techStack: [
-      "React.js, Next.js, Tailwind CSS",
+      " Next.js, Tailwind CSS",
       "Node.js, Express.js",
-      "MongoDB",
-      "Firebase & JWT",
+      "MongoDB", "mongoose",
+      "JWT",
       "Stripe API"
     ],
     links: [
       {
         label: "GitHub",
         icon: <FaGithub />,
-        url: "https://github.com/your-repo",
+        url: "https://github.com/kmdripon1991/meal-box-client",
       },
       {
         label: "Server",
         icon: <IoServerSharp />,
-        url: "https://github.com/your-server-repo",
+        url: "https://meal-box-server-production-79f1.up.railway.app",
       },
       {
         label: "Live",
         icon: <FiExternalLink />,
-        url: "https://your-live-site.com",
+        url: "https://meal-box-team-client.vercel.app",
       },
     ],
   },
   {
-    id: '01',
-    title: "Meal Box",
-    description: "Meal Box is a convenient meal subscription platform designed to deliver fresh, chef-prepared meals directly to customers' doorsteps. Built with React, Node.js, and MongoDB, this full-stack application offers a seamless user experience with features like customizable meal plans, secure payments, and real-time order tracking",
-    image: "https://i.ibb.co.com/Vpx2Z0RZ/screencapture-meal-box-team-client-vercel-app-dashboard-2025-05-01-14-52-41.png",
+    id: '02',
+    title: "Char Shop",
+    description:
+      "Char Shop is a modern e-commerce platform tailored for selling digital character assets, ideal for gamers, designers, and content creators. Built using React.js, Node.js, MongoDB, and Stripe, it provides a smooth, secure shopping experience with fast loading speeds and responsive design. Users can explore a variety of unique characters, view detailed previews, and make purchases with ease using a fully integrated checkout system. The admin panel allows for inventory management, customer order tracking, and analytics insights. Char Shop also supports user authentication, allowing buyers to manage their order history and wishlist. With intuitive navigation, mobile compatibility, and reliable performance, Char Shop stands out as a streamlined marketplace for digital character assets. It ensures both creators and buyers enjoy a seamless and secure environment for commerce, making it the perfect solution for niche digital product sales.",
+    image: "https://i.ibb.co.com/1Y1fXrm0/screencapture-car-shop-one-indol-vercel-app-dashboard-board-2025-05-01-21-26-54.png",
     keyFeatures: [
-      "User-friendly dashboard for meal selection",
-      "Secure checkout with Stripe integration",
-      "Admin panel for restaurant partners",
-      "Responsive design for all devices"
+      "Browse and preview high-quality character assets",
+      "Secure Stripe-based checkout system",
+      "Admin panel for product and order management",
+      "Responsive UI optimized for mobile and desktop"
     ],
     techStack: [
-      "React.js, Next.js, Tailwind CSS",
+      "React.js, Tailwind CSS",
       "Node.js, Express.js",
-      "MongoDB",
-      "Firebase & JWT",
+      "MongoDB", "mongoose",
+      "JWT",
       "Stripe API"
     ],
     links: [
       {
         label: "GitHub",
         icon: <FaGithub />,
-        url: "https://github.com/your-repo",
+        url: "https://github.com/sujon-258549/assungment-4-car-frontend.git",
       },
       {
         label: "Server",
         icon: <IoServerSharp />,
-        url: "https://github.com/your-server-repo",
+        url: "https://github.com/sujon-258549/level-2-assignment-2.git",
       },
       {
         label: "Live",
         icon: <FiExternalLink />,
-        url: "https://your-live-site.com",
+        url: "https://car-shop-one-indol.vercel.app",
       },
     ],
   },
   {
-    id: '01',
+    id: '03',
     title: "Meal Box",
     description: "Meal Box is a convenient meal subscription platform designed to deliver fresh, chef-prepared meals directly to customers' doorsteps. Built with React, Node.js, and MongoDB, this full-stack application offers a seamless user experience with features like customizable meal plans, secure payments, and real-time order tracking",
     image: "https://i.ibb.co.com/Vpx2Z0RZ/screencapture-meal-box-team-client-vercel-app-dashboard-2025-05-01-14-52-41.png",
@@ -178,14 +179,14 @@ export function Project() {
                     </span>
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white">{project.title}</h2>
+                    <h2 className="text-2xl font-bold text-white">{project?.title}</h2>
 
                   </div>
                 </div>
 
                 {/* Description with animated underline */}
                 <p className="text-gray-300 mb-6 relative after:absolute after:bottom-[-8px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-500 group-hover:after:w-full">
-                  {project.description.slice(0, 60)}....
+                  {project?.description?.slice(0, 60)}....
                 </p>
 
                 {/* Image with 3D tilt effect */}
@@ -193,7 +194,7 @@ export function Project() {
 
                   <div className=" rounded-xl overflow-hidden border border-gray-700/50 shadow-lg">
                     <img style={{ width: '100%', height: '350px', objectFit: 'cover' }}
-                      src="https://i.ibb.co.com/Vpx2Z0RZ/screencapture-meal-box-team-client-vercel-app-dashboard-2025-05-01-14-52-41.png"
+                      src={project?.image}
                       alt="Meal Box Dashboard"
                       className="w-full h-full transition-transform duration-500 group-hover:scale-[1.02]"
 

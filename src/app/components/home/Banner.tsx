@@ -4,15 +4,6 @@ import { FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
-  const handleDownload = () => {
-    // Create a temporary anchor element to trigger download
-    const link = document.createElement('a');
-    link.href = '/path-to-your-cv.pdf'; // Replace with your actual CV path
-    link.download = 'Sujon_CV.pdf'; // Customize the downloaded filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <section className=" py-10 md:py-16 relative overflow-hidden text-white">
@@ -60,13 +51,15 @@ const Banner = () => {
             </div>
 
             {/* Download CV Button with working functionality */}
-            <Button
-              onClick={handleDownload}
-              className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold px-8 py-4 rounded-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-emerald-500/30"
-            >
-              <FaDownload className="text-lg" />
-              <span>Download CV</span>
-            </Button>
+            <div className="mt-5 md:mt-10">
+              <a className="" href="https://drive.google.com/file/d/1TccrW7P7zTgqdf6EmwdB-lF2LwWOnUdJ/view?usp=sharing">  <Button
+
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold px-8 py-4 rounded-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-emerald-500/30"
+              >
+                <FaDownload className="text-lg" />
+                <span>Download CV</span>
+              </Button></a>
+            </div>
           </div>
 
           {/* Right Image with decorative elements */}
