@@ -4,16 +4,17 @@ import { FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
-
   return (
     <section className=" py-10 md:py-16 relative overflow-hidden text-white">
-      <div className=" px-6 lg:px-16">
+      <div className=" px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content - All text information */}
           <div className="w-full lg:w-1/2 space-y-6">
             {/* Designation */}
             <div className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-full inline-block shadow-lg">
-              <span className="font-medium tracking-wide">Web Stack Developer</span>
+              <span className="font-medium tracking-wide">
+                Web Stack Developer
+              </span>
             </div>
 
             {/* Name and Introduction */}
@@ -41,24 +42,30 @@ const Banner = () => {
 
             {/* About Me */}
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 shadow-lg">
-              <h3 className="text-lg font-bold text-emerald-400 mb-2">About Me</h3>
+              <h3 className="text-lg font-bold text-emerald-400 mb-2">
+                About Me
+              </h3>
               <p className="text-gray-200 leading-relaxed">
-                I,m a passionate full-stack developer specializing in modern web technologies.
-                With expertise in React.js, Node.js, Express, and MongoDB, I build clean,
-                responsive, and high-performance applications. My focus is on creating
-                maintainable code and exceptional user experiences.
+                I,m a passionate full-stack developer specializing in modern web
+                technologies. With expertise in React.js, Node.js, Express, and
+                MongoDB, I build clean, responsive, and high-performance
+                applications. My focus is on creating maintainable code and
+                exceptional user experiences.
               </p>
             </div>
 
             {/* Download CV Button with working functionality */}
             <div className="mt-5 md:mt-10">
-              <a className="" href="https://drive.google.com/file/d/1TccrW7P7zTgqdf6EmwdB-lF2LwWOnUdJ/view?usp=sharing">  <Button
-
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold px-8 py-6 rounded-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-emerald-500/30"
+              <a
+                className=""
+                href="https://drive.google.com/file/d/1TccrW7P7zTgqdf6EmwdB-lF2LwWOnUdJ/view?usp=sharing"
               >
-                <FaDownload className="text-lg" />
-                <span>Download CV</span>
-              </Button></a>
+                {" "}
+                <Button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold px-8 py-6 rounded-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-emerald-500/30">
+                  <FaDownload className="text-lg" />
+                  <span>Download CV</span>
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -75,7 +82,6 @@ const Banner = () => {
                 priority
               />
               {/* Floating tech badges */}
-
             </div>
 
             {/* Animated background elements */}
