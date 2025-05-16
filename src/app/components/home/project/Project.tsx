@@ -58,12 +58,12 @@ const projects: Project[] = [
       {
         label: "GitHub",
         icon: <FaGithub />,
-        url: "https://github.com/sujon-258549/assungment-4-car-frontend.git",
+        url: "https://github.com/sujon-258549/meal-box-client-tem.git",
       },
       {
         label: "Server",
         icon: <IoServerSharp />,
-        url: "https://github.com/sujon-258549/level-2-assignment-2.git",
+        url: "https://github.com/sujon-258549/meal-box-server--team.git",
       },
       {
         label: "Live",
