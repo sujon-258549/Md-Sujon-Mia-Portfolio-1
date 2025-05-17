@@ -70,7 +70,7 @@ const Banner = () => {
           </div>
 
           {/* Right Image with decorative elements */}
-          <div className="w-full lg:w-1/2 flex justify-center relative">
+          <div className="w-full lg:w-1/2 flex lg:justify-end justify-center relative">
             <div className="relative z-10 group">
               <div className="absolute -inset-3 bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-xl blur opacity-20 group-hover:opacity-30 transition-all duration-500 -z-10"></div>
               <Image

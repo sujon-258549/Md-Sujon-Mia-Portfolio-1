@@ -18,7 +18,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "skills", "project", "education", "services","contact"];
+      const sections = [
+        "about",
+        "skills",
+        "project",
+        "education",
+        "services",
+        "contact",
+      ];
       let currentSection = "home";
 
       for (let section of sections) {
@@ -50,7 +57,11 @@ const Navbar = () => {
     <>
       <nav
         id="home"
-        style={{ zIndex: "999", borderBottom: "1px solid white", backgroundColor: '#424242' }}
+        style={{
+          zIndex: "999",
+          borderBottom: "1px solid white",
+          backgroundColor: "#424242",
+        }}
         className="shadow dark:bg-customBg sticky top-0 left-0"
       >
         <div className="max-w-6xl px-5 py-4 mx-auto">
@@ -65,7 +76,7 @@ const Navbar = () => {
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   type="button"
-                  className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                  className="text-white "
                   aria-label="toggle menu"
                 >
                   {!isOpen ? <FaBars size={24} /> : <FaTimes size={24} />}
@@ -75,12 +86,13 @@ const Navbar = () => {
 
             {/* Mobile Menu open: "block", Menu closed: "hidden" */}
             <div
-              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-[#1D1C21] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${isOpen
-                ? "translate-x-0 opacity-100"
-                : "opacity-0 -translate-x-full"
-                }`}
+              className={`absolute inset-x-0 z-20 w-full  py-4 transition-all duration-300 ease-in-out bg-[#424242] dark:bg-[#1D1C21] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${
+                isOpen
+                  ? "translate-x-0 opacity-100"
+                  : "opacity-0 -translate-x-full"
+              }`}
             >
-              <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
+              <div className="flex flex-col -mx-6 px-5 lg:px-0 lg:flex-row lg:items-center">
                 {[
                   { id: "about", label: "About" },
                   { id: "skills", label: "skills" },
@@ -91,10 +103,11 @@ const Navbar = () => {
                 ].map(({ id, label }) => (
                   <button
                     key={id}
-                    className={`px-3 py-2 text-left mx-3 mt-2 text-white hover:text-black font-semibold  transition-colors duration-300 transform  lg:mt-0  hover:bg-gray-100 dark:hover:bg-gray-700 ${activeSection === id
-                      ? "border-b-[3px] dark:text-customSion border-customSion"
-                      : "dark:text-gray-200"
-                      }`}
+                    className={`px-3 py-2 text-left mx-3 mt-2 text-white hover:text-black font-semibold  transition-colors duration-300 transform  lg:mt-0  hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      activeSection === id
+                        ? "border-b-[3px] dark:text-customSion border-customSion"
+                        : "dark:text-gray-200"
+                    }`}
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(id);
@@ -120,7 +133,7 @@ const Navbar = () => {
         <section className="max-w-6xl mx-auto" id="project">
           <Project />
         </section>
-        <section className="" id="education">
+        <section className="max-w-6xl px-6 mx-auto" id="education">
           <Education />
         </section>
         <section className="max-w-6xl mx-auto" id="services">
@@ -129,7 +142,9 @@ const Navbar = () => {
         <section className="max-w-6xl px-6 mx-auto" id="contact">
           <Contact />
         </section>
-        <section style={{ backgroundColor: "#424242", boxShadow: '1px 1px 10px' }}>
+        <section
+          style={{ backgroundColor: "#424242", boxShadow: "1px 1px 10px" }}
+        >
           <div className="max-w-6xl px-6 lg:px-0 mx-auto">
             <Footer />
           </div>
