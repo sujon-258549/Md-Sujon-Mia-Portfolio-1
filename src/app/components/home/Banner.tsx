@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import { MdOutlineDeveloperMode } from "react-icons/md";
 
 const Banner = () => {
   return (
@@ -11,9 +12,9 @@ const Banner = () => {
           {/* Left Content - All text information */}
           <div className="w-full lg:w-1/2 space-y-6">
             {/* Designation */}
-            <div className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-full inline-block shadow-lg">
-              <span className="font-medium tracking-wide">
-                Web Stack Developer
+            <div className=" bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-full inline-block shadow-lg">
+              <span className="font-medium flex gap-1 items-center tracking-wide">
+                <MdOutlineDeveloperMode /> Web Developer
               </span>
             </div>
 
